@@ -19,7 +19,7 @@ hasCJKLanguage = true
   [params.author]
     name = "Sakura"
     headline = "看番、看小说、打游戏，偶尔写点东西"
-    bio = "喜欢看小说、动漫，也爱打游戏。这里记录我的日常、番剧和游戏感想，欢迎来逛逛。"
+    bio = "喜欢看小说、动漫，也爱打游戏。这里记录我的日常、番剧和游戏经历，欢迎来逛逛。"
 
     # 社交链接（取消注释并填入你的链接即可显示）
     # [[params.author.links]]
