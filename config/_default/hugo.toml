@@ -1,6 +1,6 @@
 # -- Sakura 主题站点配置 --
 
-baseURL = "/sakura.github.io/"
+baseURL = "/"
 defaultContentLanguage = "zh-cn"
 title = "Sakuraの小站"
 theme = "sakura"
