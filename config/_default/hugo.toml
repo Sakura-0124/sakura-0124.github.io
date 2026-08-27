@@ -1,0 +1,48 @@
+# -- Sakura 主题站点配置 --
+
+baseURL = "/sakura.github.io/"
+defaultContentLanguage = "zh-cn"
+title = "Sakuraの小站"
+theme = "sakura"
+
+# 中文内容
+hasCJKLanguage = true
+
+# 文章分页
+[pagination]
+  pagerSize = 10
+
+# 站点参数
+[params]
+  description = "Sakura 的个人博客 · 动漫 · 守望先锋 · 生活"
+
+  [params.author]
+    name = "Sakura"
+    headline = "看番、打守望，偶尔写点东西"
+    bio = "喜欢看动漫，也爱打守望先锋。这里记录我的日常、番剧感想和游戏心得，欢迎来逛逛。"
+
+    # 社交链接（取消注释并填入你的链接即可显示）
+    # [[params.author.links]]
+    #   name = "GitHub"
+    #   url = "https://github.com/你的用户名"
+
+# 导航菜单
+[[menu.main]]
+  name = "首页"
+  url = "/"
+  weight = 10
+
+[[menu.main]]
+  name = "文章"
+  url = "/posts/"
+  weight = 20
+
+[[menu.main]]
+  name = "标签"
+  url = "/tags/"
+  weight = 30
+
+[[menu.main]]
+  name = "关于"
+  url = "/about/"
+  weight = 40

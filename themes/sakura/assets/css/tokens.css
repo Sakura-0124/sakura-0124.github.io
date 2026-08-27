@@ -1,0 +1,118 @@
+/* ═══════════════════════════════════════════
+   Design Tokens — 移植自 Miuix Colors.kt
+   lightColorScheme() / darkColorScheme()
+   ═══════════════════════════════════════════ */
+
+:root {
+  /* ── Primary ── */
+  --mx-primary: #3482FF;
+  --mx-primary-hover: #5D9BFF;
+  --mx-primary-active: #277AF7;
+  --mx-primary-on: #FFFFFF;
+  --mx-primary-glow: rgba(52, 130, 255, 0.12);
+  --mx-primary-container: #5D9BFF;
+  --mx-primary-container-on: #FFFFFF;
+  --mx-primary-variant: #3482FF;
+  --mx-primary-variant-on: #AECDFF;
+  --mx-tertiary-container: #EAF2FF;
+  --mx-tertiary-container-on: #3482FF;
+
+  /* ── Semantic ── */
+  --mx-error: #E94634;
+  --mx-green: #34D399;
+  --mx-amber: #FBBF24;
+  --mx-blue: #60A5FA;
+
+  /* ── Surface ── */
+  --mx-bg: #FFFFFF;
+  --mx-surface: #F7F7F7;
+  --mx-surface-variant: #FFFFFF;
+  --mx-s1: #F7F7F7;
+  --mx-s2: #FFFFFF;
+  --mx-s3: #E8E8E8;
+  --mx-s4: #E8E8E8;
+  --mx-s-hover: rgba(0, 0, 0, 0.04);
+  --mx-s-active: rgba(0, 0, 0, 0.07);
+
+  /* ── Text ── */
+  --mx-text: #000000;
+  --mx-text-on-surface: rgba(0, 0, 0, 0.8);
+  --mx-text-variant: rgba(0, 0, 0, 0.6);
+  --mx-t2: rgba(0, 0, 0, 0.6);
+  --mx-t3: rgba(0, 0, 0, 0.4);
+  --mx-text-disabled: #B2B2B2;
+
+  /* ── Secondary / Border ── */
+  --mx-secondary: #E6E6E6;
+  --mx-secondary-variant: #F0F0F0;
+  --mx-border: #D9D9D9;
+  --mx-divider: #E0E0E0;
+
+  /* ── Radius ── */
+  --mx-r: 16px;
+  --mx-r-sm: 12px;
+  --mx-r-xs: 8px;
+  --mx-r-pill: 9999px;
+
+  /* ── Shadow ── */
+  --mx-sh1: 0 1px 4px rgba(0, 0, 0, 0.08);
+  --mx-sh2: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --mx-sh3: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --mx-glow: 0 0 0 1px rgba(52, 130, 255, 0.06), 0 2px 12px rgba(52, 130, 255, 0.04);
+
+  /* ── Motion ── */
+  --mx-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --mx-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --mx-d1: 100ms;
+  --mx-d2: 200ms;
+  --mx-d3: 320ms;
+
+  /* ── Typography ── */
+  --mx-font: "MiSans", "Mi Sans", -apple-system, "PingFang SC", "Noto Sans SC", "Segoe UI", sans-serif;
+  --mx-mono: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+}
+
+/* ═══ DARK MODE — darkColorScheme() ═══ */
+[data-theme="dark"] {
+  --mx-primary: #277AF7;
+  --mx-primary-hover: #338FE4;
+  --mx-primary-active: #0073DD;
+  --mx-primary-on: #FFFFFF;
+  --mx-primary-glow: rgba(39, 122, 247, 0.15);
+  --mx-primary-container: #338FE4;
+  --mx-primary-variant: #0073DD;
+  --mx-tertiary-container: #2B3B54;
+  --mx-tertiary-container-on: #4788FF;
+
+  --mx-error: #F12522;
+  --mx-green: #34D399;
+  --mx-amber: #FBBF24;
+  --mx-blue: #60A5FA;
+
+  --mx-bg: #161616;
+  --mx-surface: #0C0C0C;
+  --mx-surface-variant: #1C1C1C;
+  --mx-s1: #0C0C0C;
+  --mx-s2: #1C1C1C;
+  --mx-s3: #242424;
+  --mx-s4: #2C2C2C;
+  --mx-s-hover: rgba(255, 255, 255, 0.04);
+  --mx-s-active: rgba(255, 255, 255, 0.07);
+
+  --mx-text: #F2F2F2;
+  --mx-text-on-surface: rgba(255, 255, 255, 0.8);
+  --mx-text-variant: rgba(255, 255, 255, 0.5);
+  --mx-t2: rgba(255, 255, 255, 0.6);
+  --mx-t3: rgba(255, 255, 255, 0.4);
+  --mx-text-disabled: #666666;
+
+  --mx-secondary: #505050;
+  --mx-secondary-variant: #434343;
+  --mx-border: #484848;
+  --mx-divider: #404040;
+
+  --mx-sh1: 0 1px 4px rgba(0, 0, 0, 0.5);
+  --mx-sh2: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --mx-sh3: 0 8px 32px rgba(0, 0, 0, 0.45);
+  --mx-glow: 0 0 0 1px rgba(39, 122, 247, 0.08), 0 2px 12px rgba(39, 122, 247, 0.06);
+}

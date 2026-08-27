@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="container">
+  <header class="article-header">
+    <h1># {{ .Title }}</h1>
+    <div class="meta"><span>{{ len .Pages }} 篇文章</span></div>
+  </header>
+  <div class="article-list">
+    {{ range .Pages }}
+      {{ partial "article-card.html" . }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default "zh-cn" }}" data-theme="light">
+  {{- partial "head.html" . -}}
+  <body>
+    {{- partial "header.html" . -}}
+    <main>
+      {{- block "main" . }}{{ end -}}
+    </main>
+    {{- partial "footer.html" . -}}
+    <script>
+      (function () {
+        var toggle = document.getElementById('theme-toggle');
+        if (!toggle) return;
+        function icon() {
+          toggle.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
+        }
+        icon();
+        toggle.addEventListener('click', function () {
+          var dark = document.documentElement.getAttribute('data-theme') !== 'dark';
+          document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+          localStorage.setItem('theme', dark ? 'dark' : 'light');
+          icon();
+        });
+      })();
+    </script>
+  </body>
+</html>

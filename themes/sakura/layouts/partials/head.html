@@ -1,0 +1,28 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
+  {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+
+  <!-- MiSans 字体 -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/misans@4.1/lib/Normal/MiSans-Regular.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/misans@4.1/lib/Normal/MiSans-Medium.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/misans@4.1/lib/Normal/MiSans-Semibold.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/misans@4.1/lib/Normal/MiSans-Bold.min.css">
+
+  <!-- 样式 -->
+  {{ $tokens := resources.Get "css/tokens.css" }}
+  {{ $main := resources.Get "css/main.css" }}
+  {{ $css := slice $tokens $main | resources.Concat "css/style.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+  <!-- 主题跟随系统（避免闪烁） -->
+  <script>
+    (function () {
+      var stored = localStorage.getItem('theme');
+      var dark = stored ? stored === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    })();
+  </script>
+</head>

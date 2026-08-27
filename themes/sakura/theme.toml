@@ -1,0 +1,8 @@
+name = "Sakura"
+license = "MIT"
+description = "基于 Miuix (小米 HyperOS) 设计语言的自定义 Hugo 主题，参考 bmbxwbh/miuix-console"
+min_version = "0.120.0"
+
+[author]
+  name = "Sakura"
+  homepage = "https://example.org"

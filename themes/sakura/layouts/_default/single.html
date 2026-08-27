@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="container">
+  <article>
+    <header class="article-header">
+      <h1>{{ .Title }}</h1>
+      <div class="meta">
+        <span>{{ .Date.Format "2006年1月2日" }}</span>
+        {{ with .Params.categories }}<span>{{ delimit . " / " }}</span>{{ end }}
+        <span>约 {{ .ReadingTime }} 分钟</span>
+      </div>
+    </header>
+    <div class="article-content">
+      {{ .Content }}
+    </div>
+    <footer class="article-footer">
+      {{ with .Params.tags }}
+      <div class="tags">
+        {{ range . }}<a class="mx-tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>{{ end }}
+      </div>
+      {{ end }}
+    </footer>
+  </article>
+</div>
+{{ end }}

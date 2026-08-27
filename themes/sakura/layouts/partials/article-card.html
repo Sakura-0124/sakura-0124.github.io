@@ -1,0 +1,16 @@
+{{ $page := . }}
+<a class="article-card" href="{{ $page.RelPermalink }}">
+  <h2>{{ $page.Title }}</h2>
+  <div class="meta">
+    <span>{{ $page.Date.Format "2006年1月2日" }}</span>
+    {{ with $page.Params.categories }}{{ range . }}<span>{{ . }}</span>{{ end }}{{ end }}
+  </div>
+  {{ with $page.Summary }}
+    <div class="summary">{{ . | plainify | truncate 120 }}</div>
+  {{ end }}
+  {{ with $page.Params.tags }}
+    <div class="tags">
+      {{ range . }}<span class="mx-tag">#{{ . }}</span>{{ end }}
+    </div>
+  {{ end }}
+</a>

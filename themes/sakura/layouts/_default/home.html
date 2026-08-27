@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="container">
+  <section class="hero">
+    <div class="hero-avatar">{{ .Site.Params.author.name | truncate 1 "" }}</div>
+    <h1 class="hero-name">{{ .Site.Params.author.name }}</h1>
+    {{ with .Site.Params.author.headline }}<p class="hero-headline">{{ . }}</p>{{ end }}
+    {{ with .Site.Params.author.bio }}<p class="hero-bio">{{ . }}</p>{{ end }}
+    {{ with .Site.Params.author.links }}
+    <div class="hero-links">
+      {{ range . }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>{{ end }}
+    </div>
+    {{ end }}
+  </section>
+
+  {{ $mainSections := .Site.Params.mainSections | default (slice "posts") }}
+  {{ $pages := where .Site.RegularPages "Type" "in" $mainSections }}
+  <h2 class="section-title">最新文章<span class="count">{{ len $pages }}</span></h2>
+  <div class="article-list">
+    {{ range first 5 $pages }}
+      {{ partial "article-card.html" . }}
+    {{ end }}
+  </div>
+  {{ if gt (len $pages) 5 }}
+  <div style="text-align:center;margin-top:24px">
+    <a class="mx-btn" href="/posts/">查看全部文章</a>
+  </div>
+  {{ end }}
+</div>
+{{ end }}
